@@ -1,9 +1,9 @@
 #include "main.h"
 /**
+ * execute - funtion eecute the commend
+ *@arguments: have the cmd
  *
- *
- *
- *
+ *Return: the commend to the launch func
  */
 char *bulitin[] = {
 	"cd",
@@ -31,10 +31,10 @@ int execute(char**arguments)
 	return (launch(arguments));
 }
 /**
+ * my_cd - function have my cd command
+ * @arguments: have the command
  *
- *
- *
- *
+ * Return: 1 n success
  */
 int my_cd(char **arguments)
 {
@@ -46,11 +46,12 @@ int my_cd(char **arguments)
 	return (1);
 }
 /**
+ * my-help - my command help
+ *@arguments: have the command
  *
- *
- *
+ * Retuen: 1 on success
  */
-in my_help(char **arguments)
+int my_help(char **arguments)
 {
 	int c;
 
@@ -64,11 +65,12 @@ in my_help(char **arguments)
 	return (1);
 }
 /**
+ * my_exit - function have my exit command 
+ * @arguments: have the exit command
  *
- *
- *
+ * Return: 0 on exting
  */
-int ny_exit(char **arguments)
+int my_exit(char **arguments)
 {
 	return (0);
 }
