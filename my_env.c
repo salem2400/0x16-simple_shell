@@ -7,15 +7,15 @@
  */
 int my_env(char **arguments)
 {
-    int c = 0;
-    (void)(**arguments);
+	int c = 0;
+	(void)(**arguments);
 
-    while (environ[c])
-    {
-        write(STDOUT_FILENO, environ[c], strlen(environ[c]));
-        write(STDOUT_FILENO, "\n", 1);
-        c++;
-    }
-    return (-1);
-    
+	while (environ[c])
+	{
+		write(STDOUT_FILENO, environ[c], strlen(environ[c]));
+		write(STDOUT_FILENO, "\n", 1);
+		c++;
+	}
+	return (-1);
+
 }
