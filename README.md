@@ -1,1 +1,1 @@
-simple_shell_project
+simple_shell
