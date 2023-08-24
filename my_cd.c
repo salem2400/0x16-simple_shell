@@ -13,7 +13,8 @@ int my_cd(char **arguments)
 	}
 	else
 	{
-		if(chdir(arguments[1] != 0)
+		if(chdir(arguments[1]) != 0)
 				perror("error");
 	}
 	return (1);
+}

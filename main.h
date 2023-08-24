@@ -13,11 +13,8 @@ int my_cd(char **arguments);
 int my_help(char **arguments);
 int my_exit(char **arguments);
 int num_bulitin(char **bulitin);
-int execute(char **arguments, char **bulitin);
+int execute(char **arguments);
 void loop(void);
 char *get_location(char *cmd);
-
-extern char *bulitin[];
-extern int (*bulitin_func[])(char **);
 
 #endif
