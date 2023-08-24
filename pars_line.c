@@ -12,7 +12,7 @@ char **split_line(char *line)
 	int c = 0;
 	char **toks;
 	char *tok;
-	char *dlim = " \t\r\n\a"
+	char *dlim = " \t\r\n\a";
 
 	toks = malloc(sizeof(char *) * bsize);
 	if (!toks)
@@ -32,5 +32,3 @@ char **split_line(char *line)
 	toks[c] = NULL;
 	return (toks);
 }
-
-

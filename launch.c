@@ -7,7 +7,7 @@
  */
 int launch(char **arguments)
 {
-	char *command_path = get_loction(arguments[0]);
+	char *command_path = get_location(arguments[0]);
 
 	if (command_path == NULL)
 		fprintf(stderr, "No such file or directory\n");
@@ -22,7 +22,7 @@ int launch(char **arguments)
 	{
 		char *env[] = {NULL};
 
-		if (execve(commend_path, arguments, env) == -1)
+		if (execve(command_path, arguments, env) == -1)
 			perror("error");
 		exit(EXIT_FAILURE);
 	}
@@ -33,10 +33,9 @@ int launch(char **arguments)
 	else
 	{
 		do {
-			wpid = waitpid(pid, &stat, WNUTRACED);
+			wpid = waitpid(pid, &stat, WUNTRACED);
 		} while (!WIFEXITED(stat) && !WIFSIGNALED(stat));
 	}
 	free(command_path);
 	return (1);
 }
-

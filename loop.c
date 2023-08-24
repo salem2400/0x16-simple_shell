@@ -14,7 +14,7 @@ void loop(void)
 		printf(":) ");
 		line = read_line();
 		arguments = pars_line(line);
-		stat = exe_cmd(arguments);
+		stat = execute(arguments);
 		free(line);
 		free(arguments);
 	} while (stat);

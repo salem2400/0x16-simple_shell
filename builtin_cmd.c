@@ -4,7 +4,7 @@
  *
  * Return: num of size bulitin
  */
-int num_bulitin(void)
+int num_bulitin(char **bulitin)
 {
 	return (sizeof(bulitin) / sizeof(char *));
 }
@@ -22,8 +22,8 @@ int execute(char **arguments)
 
 	if (arguments[0] == NULL)
 		return (1);
-	for (c = 0 ; c < num_bulitin() ; c++)
-		if (strcmp(args[0], bulitin[c]) == 0)
+	for (c = 0 ; c < num_bulitin(bulitin) ; c++)
+		if (strcmp(arguments[0], bulitin[c]) == 0)
 			return ((*bulitin_func[c])(arguments));
 	return (launch(arguments));
 }
@@ -38,7 +38,7 @@ int my_cd(char **arguments)
 	if (arguments[1] == NULL)
 		fprintf(stderr, "expected argument to \'cd\"\n");
 	else
-		if (chdir(arguments[1] != 0))
+		if (chdir(arguments[1]) != 0)
 			perror("error");
 	return (1);
 }
@@ -56,7 +56,7 @@ int my_help(char **arguments)
 	printf("Type program name and argument, and press enter.\n");
 	printf("the following are built in:\n");
 
-	for (c = 0 ; c < num_bulitin(); c++)
+	for (c = 0 ; c < num_bulitin(bulitin); c++)
 		printf(" %s\n", bulitin[c]);
 	printf("Ude the man command for informayion on other program.\n");
 	return (1);
