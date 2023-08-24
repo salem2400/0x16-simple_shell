@@ -7,15 +7,19 @@
  */
 int launch(char **arguments)
 {
-	char *command_path = get_location(arguments[0]);
-
-	if (command_path == NULL)
-		fprintf(stderr, "No such file or directory\n");
-		return (1);
-
 	pid_t pid;
 	pid_t wpid;
 	int stat;
+
+	char *command_path = get_location(arguments[0]);
+
+	if (command_path == NULL)
+		{
+			fprintf(stderr, "No such file or directory\n");
+		return (1);
+		}
+
+
 
 	pid = fork();
 	if (pid == 0)
@@ -37,5 +41,6 @@ int launch(char **arguments)
 		} while (!WIFEXITED(stat) && !WIFSIGNALED(stat));
 	}
 	free(command_path);
+	(void)wpid;
 	return (1);
 }
