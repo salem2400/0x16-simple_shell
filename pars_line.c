@@ -17,13 +17,17 @@ char **parse_line(char *line)
 	toks = malloc(sizeof(char *) * bsize);
 	if (!toks)
 	{
-		fprintf(stderr, "allocation error\n");
+		fprintf(stderr, "allocation error in split line\n");
 		exit(EXIT_FAILURE);
 	}
 
 	tok = strtok(line, dlim);
 	while (tok != NULL)
 	{
+		if (tok[0] == '#')
+		{
+			break;
+		}
 		toks[c] = tok;
 		c++;
 		if (c >= bsize)
@@ -36,7 +40,6 @@ char **parse_line(char *line)
 					exit(EXIT_FAILURE);
 				}
 		}
-
 
 		tok = strtok(NULL, dlim);
 	}
