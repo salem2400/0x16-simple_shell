@@ -61,13 +61,3 @@ int my_help(char **arguments)
 	printf("Ude the man command for informayion on other program.\n");
 	return (1);
 }
-/**
- * my_exit - function have my exit command
- * @arguments: have the exit command
- *
- * Return: 0 on exting
- */
-int my_exit(char **arguments)
-{
-	return (0);
-}
