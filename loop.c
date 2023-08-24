@@ -13,7 +13,7 @@ void loop(void)
 	do {
 		printf(":) ");
 		line = read_line();
-		arguments = parse_line(line);
+		arguments = pars_line(line);
 		stat = exe_cmd(arguments);
 		free(line);
 		free(arguments);
