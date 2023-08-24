@@ -5,7 +5,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/wait.h>
-/*prottypes*/
+
 char *read_line(void);
 char **parse_line(char *line);
 int launch(char **arguments);

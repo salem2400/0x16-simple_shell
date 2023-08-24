@@ -1,5 +1,4 @@
 #include "main.h"
-#include "bulitin.h"
 /**
  * my_help - function helps the user
  * @arguments: have the command
@@ -9,8 +8,19 @@
 int my_help(char **arguments)
 {
 	int c;
-	(void)arguments;
 
+
+	char *bulitin[13] = {
+		"cd",
+		"help",
+		"exit"
+	};
+	char *des[] = {
+		"change the current dir",
+		"display inf about the blitin comd",
+		"exit the shell:"
+		};
+	(void)arguments;
 	printf("simple shell\n");
 	printf("------------\n");
 	printf("A basic shell imolementation.\n\n");

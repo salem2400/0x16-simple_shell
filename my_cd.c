@@ -9,12 +9,14 @@ int my_cd(char **arguments)
 {
 	if (arguments[1] == NULL)
 	{
-		fprintf(stderr,"expected argument to 'cd'\n");
+		fprintf(stderr, "expected argument to 'cd'\n");
 	}
 	else
 	{
-		if(chdir(arguments[1]) != 0)
-				perror("error");
+		if (chdir(arguments[1]) != 0)
+		{
+			perror("error");
+		}
 	}
 	return (1);
 }

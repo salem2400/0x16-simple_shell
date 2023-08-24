@@ -15,7 +15,7 @@ int launch(char **arguments)
 
 	if (command_path == NULL)
 		{
-			fprintf(stderr, "No such file or directory\n");
+		fprintf(stderr, "No such file or directory\n");
 		return (1);
 		}
 
