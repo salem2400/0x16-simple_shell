@@ -40,7 +40,6 @@ char **parse_line(char *line)
 
 		tok = strtok(NULL, dlim);
 	}
-
 	toks[c] = NULL;
 	return (toks);
 }

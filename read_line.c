@@ -14,11 +14,12 @@ char *read_line(void)
 	{
 		if (feof(stdin))
 			exit(EXIT_SUCCESS);
-	}
-	else
-	{
-		perror("resdline");
-		exit(EXIT_FAILURE);
+
+		else
+		{
+			perror("resdline");
+			exit(EXIT_FAILURE);
+		}
 	}
 	return (line);
 }

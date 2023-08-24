@@ -30,7 +30,7 @@ int launch(char **arguments)
 			perror("error");
 		exit(EXIT_FAILURE);
 	}
-	else if (pid > 0)
+	else if (pid < 0)
 	{
 		perror("error");
 	}
