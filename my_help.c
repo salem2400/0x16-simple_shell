@@ -12,6 +12,7 @@ int my_help(char **arguments)
 
 	char *bulitin[13] = {
 		"cd",
+		"env",
 		"help",
 		"exit"
 	};

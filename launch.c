@@ -27,12 +27,14 @@ int launch(char **arguments)
 		char *env[] = {NULL};
 
 		if (execve(command_path, arguments, env) == -1)
-			perror("error");
+		{
+			perror("error in new_process: child process");
+		}
 		exit(EXIT_FAILURE);
 	}
 	else if (pid < 0)
 	{
-		perror("error");
+		perror("error in new_process: forking");
 	}
 	else
 	{
@@ -42,5 +44,5 @@ int launch(char **arguments)
 	}
 	free(command_path);
 	(void)wpid;
-	return (1);
+	return (-1);
 }

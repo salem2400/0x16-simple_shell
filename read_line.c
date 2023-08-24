@@ -12,14 +12,17 @@ char *read_line(void)
 
 	if (getline(&line, &bsize, stdin) == -1)
 	{
-		if (feof(stdin))
+		if (feof(stdin)){
+			free(line);
 			exit(EXIT_SUCCESS);
-
+		}
 		else
 		{
-			perror("resdline");
+			free(line);
+			perror("erorr while reading the line from stdin");
 			exit(EXIT_FAILURE);
 		}
 	}
 	return (line);
+
 }

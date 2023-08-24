@@ -8,6 +8,13 @@
 
 int my_exit(char **arguments)
 {
+	if (arguments[1])
+	{
+		return (atoi(arguments[1]));
+	}
+	else
+	{
+		return (0);
+	}
 	(void)arguments;
-	return (0);
 }

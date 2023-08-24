@@ -15,8 +15,8 @@ int my_cd(char **arguments)
 	{
 		if (chdir(arguments[1]) != 0)
 		{
-			perror("error");
+			perror("error in my_cd");
 		}
 	}
-	return (1);
+	return (-1);
 }

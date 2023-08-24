@@ -6,10 +6,12 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
+extern char **environ;
 char *read_line(void);
 char **parse_line(char *line);
 int launch(char **arguments);
 int my_cd(char **arguments);
+int my_env(char **arguments);
 int my_help(char **arguments);
 int my_exit(char **arguments);
 int num_bulitin(char **bulitin);
