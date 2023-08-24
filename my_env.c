@@ -2,7 +2,7 @@
 /**
  * my_env - function that prints env variable
  * @arguments: arguments
- * 
+ *
  * Return: 1 on success 0 in otherwise
  */
 int my_env(char **arguments)

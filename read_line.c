@@ -12,7 +12,8 @@ char *read_line(void)
 
 	if (getline(&line, &bsize, stdin) == -1)
 	{
-		if (feof(stdin)){
+		if (feof(stdin))
+		{
 			free(line);
 			exit(EXIT_SUCCESS);
 		}
