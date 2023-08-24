@@ -8,10 +8,15 @@
 
 int main(int argc, char **argv)
 {
-	loop();
-	(void)argc;
-	(void)argv;
-
-
-	return (EXIT_SUCCESS);
+	if (isatty(STDIN_FILENO) == 1)
+	{
+		interactive();
+	}
+	else
+	{
+		non_interactive();
+	}
+	(void)(argc);
+	(void)(argv);
+	return (0);
 }

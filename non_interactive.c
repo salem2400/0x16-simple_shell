@@ -22,5 +22,3 @@ void non_interactive(void)
 		}
 	} while (stat == -1);
 }
-
-

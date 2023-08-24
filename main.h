@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
+#define EFO 42
 extern char **environ;
 char *read_line(void);
 char **parse_line(char *line);
@@ -16,7 +17,9 @@ int my_help(char **arguments);
 int my_exit(char **arguments);
 int num_bulitin(char **bulitin);
 int execute(char **arguments);
-void loop(void);
+void interactive(void);
+void non_interactive(void);
+char *read_stream(void);
 char *get_location(char *cmd);
 
 #endif

@@ -2,7 +2,7 @@
 /**
  * read_stream - rad a line feom stream
  *
- * Return: pointer that points the read line 
+ * Return: pointer that points the read line
  */
 char *read_stream(void)
 {
@@ -34,7 +34,7 @@ char *read_stream(void)
 		{
 			line[c] = character;
 		}
-		i++;
+		c++;
 		if (c >= bsize)
 		{
 			bsize += bsize;
