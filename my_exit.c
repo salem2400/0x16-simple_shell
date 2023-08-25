@@ -14,7 +14,7 @@ int my_exit(char **arguments)
 	}
 	else
 	{
-		exit(0);
+		return(0);
 	}
 	(void)arguments;
 }
