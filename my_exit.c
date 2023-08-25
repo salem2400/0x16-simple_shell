@@ -16,5 +16,5 @@ int my_exit(char **arguments)
 	{
 		return(0);
 	}
-	(void)arguments;
+	
 }
