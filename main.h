@@ -20,6 +20,6 @@ int execute(char **arguments);
 void interactive(void);
 void non_interactive(void);
 char *read_stream(void);
-char *get_location(char *cmd);
+
 
 #endif
