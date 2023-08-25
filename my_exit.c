@@ -14,7 +14,7 @@ int my_exit(char **arguments)
 	}
 	else
 	{
-		return(0);
+		return(errno);
 	}
 	(void)(arguments);
 }
