@@ -21,8 +21,5 @@ int execute(char **arguments);
 void interactive(void);
 void non_interactive(void);
 char *read_stream(void);
-char *_strchr(char *sr, char count);
-char *_strncat(char *d, char *sr, int n);
-char *_strncpy(char *s, char *sr, int n);
 
 #endif
