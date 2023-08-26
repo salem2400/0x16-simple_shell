@@ -5,7 +5,14 @@
  *
  * Return: 0 in success
  */
-int my_exit(void)
+int my_exit(int status)
 {
-	return (0);
+	if (stutus)
+	{
+		return (atoi(status));
+	}
+	else
+	{
+		return (0);
+	}
 }
