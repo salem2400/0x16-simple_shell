@@ -11,7 +11,11 @@ int execute(char **arguments)
 		&my_cd,
 		&my_env,
 		&my_help,
+		&_strncpy,
+		&_strncat,
+		&_strchr
 	};
+
 	char *bulitin[13] = {
 		"cd",
 		"env",
