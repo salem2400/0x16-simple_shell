@@ -13,7 +13,7 @@ char *_stncpy(char *d, char *sr, int n)
 	int j;
 	char *s = d;
 
-	int i = 0;
+	i = 0;
 	while (sr[i] != '\0' && i < n-1)
 	{
 		d[i] = sr[i];
@@ -25,7 +25,7 @@ char *_stncpy(char *d, char *sr, int n)
 		while (j < n)
 		{
 			d[j] = '\0';
-			j++
+			j++;
 		}
 	}
 	return (s);
@@ -50,7 +50,7 @@ char *_strncat(char *d, char *sr, int n)
 	{
 		i++;
 	}
-	while (str[j] != '\0' && j < n)
+	while (sr[j] != '\0' && j < n)
 	{
 		d[i] = sr[j];
 		i++;
