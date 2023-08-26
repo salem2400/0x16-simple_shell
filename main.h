@@ -15,7 +15,7 @@ int launch(char **arguments);
 int my_cd(char **arguments);
 int my_env(char **arguments);
 int my_help(char **arguments);
-int my_exit(char **arguments);
+int my_exit(void);
 int num_bulitin(char **bulitin);
 int execute(char **arguments);
 void interactive(void);

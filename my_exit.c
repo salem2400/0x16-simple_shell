@@ -5,7 +5,7 @@
  *
  * Return: 0 in success
  */
-int my_exit(char *argument)
+int my_exit(void)
 {
 	return (0);
 }
