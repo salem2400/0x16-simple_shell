@@ -1,18 +1,18 @@
 #include "main.h"
 /**
- * my_exit - exit from program
- * @argument: have the commend
+ * my_exit - function
+ * @arguments: have the commit
  *
- * Return: 0 in success
+ * Return: 0
  */
-void my_exit(int status)
+int my_exit(char **arguments)
 {
-	if (stutus)
+	if (arguments[1])
 	{
-		return (atoi(status));
+		return (atoi(arguments[1]));
 	}
 	else
 	{
-		exit(status);
+	return (0);
 	}
 }

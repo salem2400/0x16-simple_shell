@@ -15,11 +15,12 @@ int launch(char **arguments);
 int my_cd(char **arguments);
 int my_env(char **arguments);
 int my_help(char **arguments);
-int my_exit(void);
+int my_exit(char **arguments);
 int num_bulitin(char **bulitin);
 int execute(char **arguments);
 void interactive(void);
 void non_interactive(void);
 char *read_stream(void);
+
 
 #endif
