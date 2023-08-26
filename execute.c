@@ -11,9 +11,7 @@ int execute(char **arguments)
 		&my_cd,
 		&my_env,
 		&my_help,
-		&_strncpy,
-		&_strncat,
-		&_strchr
+		&my_exit
 	};
 
 	char *bulitin[13] = {
