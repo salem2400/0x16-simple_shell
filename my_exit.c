@@ -5,7 +5,7 @@
  *
  * Return: 0 in success
  */
-int my_exit(int status)
+void my_exit(int status)
 {
 	if (stutus)
 	{
@@ -13,6 +13,6 @@ int my_exit(int status)
 	}
 	else
 	{
-		return (0);
+		exit(status);
 	}
 }
